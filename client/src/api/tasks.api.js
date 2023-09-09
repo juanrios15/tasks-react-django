@@ -4,7 +4,7 @@ const tasksApi = axios.create({
     baseURL:'http://localhost:8000/tasks/tasks/'
 })
 
-export const getAllTasks = () => tasksApi.get('')
+export const getAllTasks = (page) => tasksApi.get(`?page=${page}`)
 export const getTask = (id) => tasksApi.get(`${id}`)
 export const createTask = (task) => tasksApi.post('', task)
 export const deleteTask = (id) => tasksApi.delete(`${id}`)
