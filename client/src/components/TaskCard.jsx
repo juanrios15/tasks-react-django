@@ -18,7 +18,7 @@ export function TaskCard({ task }) {
             ref={setNodeRef}
             {...attributes}
             {...listeners}
-            className="bg-zinc-800 p-3 hover:bg-zinc-700 hover:cursor-pointer my-3 h-[300px]"
+            className="bg-zinc-800 p-3 hover:bg-zinc-700 hover:cursor-pointer my-3 h-[100px]"
             onClick={() => {
                 navigate(`/task/${task.id}`) }}
         >

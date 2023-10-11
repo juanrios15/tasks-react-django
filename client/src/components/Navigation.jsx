@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
+import useSound from 'use-sound';
+import lighterSound from "../assets/sounds/lighter.mp3"
 
 export function Navigation() {
+    const [play] = useSound(lighterSound);
     return (
         <div className="flex justify-between py-3">
 
             <Link to="/tasks">
                 <h1 className="font-bold text-3xl mb-4">Tasks App</h1>
             </Link>
-            <button className="bg-indigo-500 px-3 py-2 rounded-lg">
+            <button onMouseEnter={play} className="bg-indigo-500 px-3 py-2 rounded-lg">
                 <Link to="/task-create"> Create Task</Link>
             </button>
         </div>
